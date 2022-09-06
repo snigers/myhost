@@ -1,6 +1,4 @@
 <php
-
-
-echo "dfgdfgd";
+	echo "dfgdfgd";
 
 
