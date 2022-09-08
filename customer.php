@@ -1,4 +1,5 @@
 <?php
+
 function pr($data)
 {
 	echo '<pre>';
@@ -7,6 +8,10 @@ function pr($data)
 }
 
 
+$name = ($_POST["name"]) ? $_POST["name"] : "";
+$lastname = ($_POST["lastname"]) ? $_POST["lastname"] : "";
+$phone = ($_POST["phone"]) ? $_POST["phone"] : "";
+$email = ($_POST["email"]) ? $_POST["email"] : "";
 
 //$connect = pg_connect('host=myhost.local dbname=customer user=postgres password=postgres');
 //
@@ -18,13 +23,8 @@ function pr($data)
 //
 //
 //$result = pg_query($connect,
-//				   "CREATE TABLE users (
-//								id SERIAL PRIMARY KEY,
-//								name varchar null,
-//								lastname varchar null,
-//								phone int null,
-//								email varchar null
-//							)");
+//				   "INSERT INTO users (name, lastname, phone, email)
+//					VALUES ('" . $name . "', '" . $lastname . "', '" . $phone . "', '" . $email . "')");
 //
 //$errorMessage = pg_last_error();
 //
